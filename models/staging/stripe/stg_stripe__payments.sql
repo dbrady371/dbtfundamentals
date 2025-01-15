@@ -5,4 +5,4 @@ SELECT
     ,status
     ,amount / 100 as amount
     ,created as created_at
-FROM STRIPE.PAYMENT
+FROM {{ source('stripe', 'payment') }}
